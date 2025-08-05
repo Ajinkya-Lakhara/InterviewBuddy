@@ -345,14 +345,16 @@ const HomePage = () => {
           <div className="w-full"> 
             <Marquee pauseOnHover speed={40} gradient gradientColor="#FFFFFF" gradientWidth={100}> 
             <img src="/assets/img/logo/Gemini.png" alt="Gemini Logo" className="h-9 mx-12 grayscale opacity-60 transition-all duration-300 hover:grayscale-0 hover:opacity-100" /> 
-              <img src="/assets/img/logo/firebase.png" alt="Firebase Logo" className="h-9 mx-12 grayscale opacity-60 transition-all duration-300 hover:grayscale-0 hover:opacity-100" /> 
-              <img src="/assets/img/logo/microsoft.png" alt="Microsoft Logo" className="h-8 mx-12 grayscale opacity-60 transition-all duration-300 hover:grayscale-0 hover:opacity-100" /> 
+              <img src="/assets/img/logo/firebase.png" alt="Firebase Logo" className="h-12 mx-12 grayscale opacity-60 transition-all duration-300 hover:grayscale-0 hover:opacity-100" /> 
+              {/* <img src="/assets/img/logo/microsoft.png" alt="Microsoft Logo" className="h-8 mx-12 grayscale opacity-60 transition-all duration-300 hover:grayscale-0 hover:opacity-100" />  */}
               {/* <img src="/assets/img/logo/meet.png" alt="Google Meet Logo" className="h-8 mx-12 grayscale opacity-60 transition-all duration-300 hover:grayscale-0 hover:opacity-100" />  */}
               <img src="/assets/img/logo/tailwindcss.png" alt="Tailwind CSS Logo" className="h-8 mx-12 grayscale opacity-60 transition-all duration-300 hover:grayscale-0 hover:opacity-100" /> 
               {/* <img src="/assets/img/logo/zoom.png" alt="Zoom Logo" className="h-10 mx-12 grayscale opacity-60 transition-all duration-300 hover:grayscale-0 hover:opacity-100" /> */}
               <img src="/assets/img/logo/Spline.png" alt="Spline Logo" className="h-9 mx-12 grayscale opacity-60 transition-all duration-300 hover:grayscale-0 hover:opacity-100" /> 
               <img src="/assets/img/logo/Clerk.png" alt="Clerk Logo" className="h-9 mx-12 grayscale opacity-60 transition-all duration-300 hover:grayscale-0 hover:opacity-100" /> 
-              <img src="/assets/img/logo/Vite.png" alt="Vite Logo" className="h-9 mx-12 grayscale opacity-60 transition-all duration-300 hover:grayscale-0 hover:opacity-100" /> 
+              <img src="/assets/img/logo/Vite.png" alt="Vite Logo" className="h-16 mx-12 grayscale opacity-60 transition-all duration-300 hover:grayscale-0 hover:opacity-100" /> 
+              <img src="/assets/img/logo/React1.png" alt="React Logo" className="h-16 mx-12 grayscale opacity-60 transition-all duration-300 hover:grayscale-0 hover:opacity-100" /> 
+
 
             </Marquee> 
           </div> 
