@@ -352,6 +352,7 @@ const HomePage = () => {
               {/* <img src="/assets/img/logo/zoom.png" alt="Zoom Logo" className="h-10 mx-12 grayscale opacity-60 transition-all duration-300 hover:grayscale-0 hover:opacity-100" /> */}
               <img src="/assets/img/logo/Spline.png" alt="Spline Logo" className="h-9 mx-12 grayscale opacity-60 transition-all duration-300 hover:grayscale-0 hover:opacity-100" /> 
               <img src="/assets/img/logo/Clerk.png" alt="Clerk Logo" className="h-9 mx-12 grayscale opacity-60 transition-all duration-300 hover:grayscale-0 hover:opacity-100" /> 
+              <img src="/assets/img/logo/Vite.png" alt="Vite Logo" className="h-9 mx-12 grayscale opacity-60 transition-all duration-300 hover:grayscale-0 hover:opacity-100" /> 
 
             </Marquee> 
           </div> 
