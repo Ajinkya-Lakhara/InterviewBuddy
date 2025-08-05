@@ -183,11 +183,13 @@ export const QuestionSection = ({ questions }: QuestionSectionProps) => {
         score = Math.round(score * 10) / 10; // round to 1 decimal
       }
       // Update interview status and score
-      await updateDoc(doc(db, "interviews", interviewId), {
-        status: 'attempted',
-        score,
-        updateAt: serverTimestamp(),
-      });
+      if (interviewId) {
+        await updateDoc(doc(db, "interviews", interviewId), {
+          status: 'attempted',
+          score,
+          updateAt: serverTimestamp(),
+        });
+      }
     } catch (e) {
       // fallback: still navigate
       console.error(e);

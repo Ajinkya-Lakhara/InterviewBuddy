@@ -350,7 +350,7 @@ export const RecordAnswer = ({
           disbaled={!aiResult}
         />
 
-        {isLastQuestion && aiResult && (
+        {isLastQuestion && aiResult && onInterviewComplete && (
           <TooltipButton
             content="Submit Interview"
             icon={<CheckCircle className="min-w-5 min-h-5" />}

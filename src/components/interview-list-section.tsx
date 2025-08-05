@@ -3,7 +3,6 @@ import { Skeleton } from "@/components/ui/skeleton";
 import { Button } from "@/components/ui/button";
 import { InterviewPin } from "@/components/pin";
 import { Interview } from "@/types";
-import { FilePlus2, Archive } from "lucide-react";
 
 interface InterviewListSectionProps {
   title: string;
