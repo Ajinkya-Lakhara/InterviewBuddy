@@ -9,7 +9,21 @@ import {
 import { Badge } from "./ui/badge";
 import { cn } from "@/lib/utils";
 import { TooltipButton } from "./tooltip-button";
-import { Eye, Newspaper, Sparkles } from "lucide-react";
+import { Eye, Newspaper, Sparkles, Trash2 } from "lucide-react";
+import { deleteDoc, doc } from "firebase/firestore";
+import { db } from "@/config/firebase.config";
+import { toast } from "sonner";
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogTrigger,
+} from "@/components/ui/alert-dialog";
 
 interface InterviewPinProps {
   interview: Interview;
@@ -21,6 +35,18 @@ export const InterviewPin = ({
   onMockPage = false,
 }: InterviewPinProps) => {
   const navigate = useNavigate();
+
+  const handleDelete = async () => {
+    try {
+      await deleteDoc(doc(db, "interviews", interview.id));
+      toast.success("Interview deleted successfully");
+      // Refresh the page to update the list
+      window.location.reload();
+    } catch (error) {
+      console.error("Error deleting interview:", error);
+      toast.error("Failed to delete interview");
+    }
+  };
 
   // Determine card color for attempted interviews with a score
   let cardColor = "";
@@ -122,6 +148,34 @@ export const InterviewPin = ({
               icon={<Sparkles />}
               loading={false}
             />
+
+            <AlertDialog>
+              <AlertDialogTrigger asChild>
+                <TooltipButton
+                  content="Delete"
+                  buttonVariant={"ghost"}
+                  onClick={() => {}} // Empty function since AlertDialog handles the click
+                  disbaled={false}
+                  buttonClassName="hover:text-red-500"
+                  icon={<Trash2 />}
+                  loading={false}
+                />
+              </AlertDialogTrigger>
+              <AlertDialogContent>
+                <AlertDialogHeader>
+                  <AlertDialogTitle>Delete Interview</AlertDialogTitle>
+                  <AlertDialogDescription>
+                    Are you sure you want to delete this interview? This action cannot be undone.
+                  </AlertDialogDescription>
+                </AlertDialogHeader>
+                <AlertDialogFooter>
+                  <AlertDialogCancel>Cancel</AlertDialogCancel>
+                  <AlertDialogAction onClick={handleDelete} className="bg-red-600 hover:bg-red-700">
+                    Delete
+                  </AlertDialogAction>
+                </AlertDialogFooter>
+              </AlertDialogContent>
+            </AlertDialog>
           </div>
         )}
       </CardFooter>
