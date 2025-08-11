@@ -195,7 +195,7 @@ import {
   
           ${data.interviewType === 'mixed' ? `The questions should be a mix of technical skills assessment in ${data?.techStack} development and behavioral competencies including leadership, teamwork, and problem-solving approaches.` : ''}
   
-  
+          ${data.experience == 0 ? 'Important: Since the required experience is 0, the questions must be very easy and short, suitable for an entry-level or fresher candidate. Focus on fundamental concepts only.' : ''}
   
           Please format the output strictly as an array of JSON objects without any additional labels, code blocks, or explanations. Return only the JSON array with questions and answers.
   
